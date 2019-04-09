@@ -109,8 +109,8 @@ public final class Socket {
         return true
     }
     public func send(_ data: Data, mode: SendMode = []) throws -> Bool {
-        var data = data
-        return try data.withUnsafeMutableBytes { bytes in
+        var data2 = data
+        return try data2.withUnsafeMutableBytes { bytes in
             return try self.send(bytes, length: data.count, mode: mode)
         }
     }
